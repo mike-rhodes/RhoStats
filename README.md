@@ -6,5 +6,5 @@ The goal of this site is to showcase all the analytics projects I've worked on o
 
 I had originally written this in Django and deployed it on Google App Engine; however, I didn't like the way it looked and felt (it was baby's first app). So, I scrapped it and decided to rebuid it in a completely new language/framework.
 
-I will be building it using the MEAN stack (MongoDB, Express.js, Angular.js and Node.js). For the css, I'll use Bootstrap and maybe some third party templates.
+I will be building it using the MEAN stack (MongoDB, Express.js, Angular.js and Node.js). For the css, I'll use Bootstrap and some third party templates (current one is from here: http://startbootstrap.com/template-overviews/clean-blog/).
 
