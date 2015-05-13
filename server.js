@@ -5,6 +5,7 @@ var fs = require('fs');
 
 var express = require('express');
 var app = express();
+
 var router = express.Router();
 var port = process.env.PORT || 8000;
 
@@ -20,11 +21,12 @@ var session = require('express-session');
 // var csrf = require('csurf');
 
 // HTTPS
-var options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
-};
+// var options = {
+//   key: fs.readFileSync('key.pem'),
+//   cert: fs.readFileSync('cert.pem')
+// };
 
+// Database configuration
 var configDB = require('./config/database.js');
 
 // Configure app

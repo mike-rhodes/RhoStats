@@ -1,7 +1,7 @@
 {
-  "name": "FirstExpressApp",
-  "version": "0.0.0",
-  "description": "",
+  "name": "RhoStats",
+  "version": "0.0.1",
+  "description": "The source code for my data/analytics blog. Now in Node.js on the Express web framework!",
   "main": "app.js",
   "dependencies": {
     "all": "^0.0.0",
@@ -15,8 +15,17 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Mike Rhodes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5743rhodesm/RhoStats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/5743rhodesm/RhoStats/issues"
+  },
+  "homepage": "https://github.com/5743rhodesm/RhoStats"
 }
