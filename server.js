@@ -40,7 +40,6 @@ require('./config/passport')(passport);
 app.use(bodyParser.json()); // get information from html forms
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(morgan('dev'));
 // app.use(csrf());
 
@@ -53,7 +52,7 @@ app.use(flash());
 
 // Routes
 app.use('/', router);
-require('./routes.js')(app, passport);
+require('./controllers/routes.js')(app, passport);
 
 
 // Start the server
