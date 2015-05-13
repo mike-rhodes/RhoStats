@@ -40,6 +40,7 @@ require('./middlewares/passport')(passport);
 app.use(bodyParser.json()); // get information from html forms
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
 // app.use(csrf());
 
@@ -61,4 +62,5 @@ require('./controllers/routes.js')(app, passport);
 //   res.end("hello world\n");
 // }).listen(port);
 app.listen(port);
-console.log("Server running on: " + port);
+console.log("Server running on: " + port)
+console.log(path.join(__dirname, 'public'));

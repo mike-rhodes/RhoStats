@@ -33,7 +33,7 @@ module.exports = function(router, passport) {
   //========= Post
   router.get('/about', function(req,res) {
 
-    res.render('about_me.ejs');
+    res.render('about_me.ejs', {title: 'RhoStats | A Blog About Everything Statistics and Programming'});
 
   });
 
