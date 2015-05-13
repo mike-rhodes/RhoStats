@@ -27,14 +27,14 @@ var session = require('express-session');
 // };
 
 // Database configuration
-var configDB = require('./config/database.js');
+var configDB = require('./middlewares/database.js');
 
 // Configure app
 mongoose.connect(configDB.url); // connect to our database
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-require('./config/passport')(passport);
+require('./middlewares/passport')(passport);
 
 // Middleware
 app.use(bodyParser.json()); // get information from html forms
@@ -61,3 +61,4 @@ require('./controllers/routes.js')(app, passport);
 //   res.end("hello world\n");
 // }).listen(port);
 app.listen(port);
+console.log("Server running on: " + port);
