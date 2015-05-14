@@ -60,17 +60,17 @@ module.exports = function(router, passport) {
   }));
 
   //========= Signup - turned off for now since we dont want people signing up
-  router.get('/signup', function (req, res) {
+  // router.get('/signup', function (req, res) {
 
-    res.render('signup.ejs', {message: req.flash('signupMessage')});
+  //   res.render('signup.ejs', {message: req.flash('signupMessage')});
 
-  });
+  // });
 
-  router.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/profile',
-    failureRedirect: '/signup',
-    failureFlash: true
-  }));
+  // router.post('/signup', passport.authenticate('local-signup', {
+  //   successRedirect: '/profile',
+  //   failureRedirect: '/signup',
+  //   failureFlash: true
+  // }));
 
   //========= Profile
   router.get('/profile', isLoggedIn, function (req, res) {
