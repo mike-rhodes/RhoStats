@@ -27,7 +27,7 @@ var session = require('express-session');
 // };
 
 // Database configuration
-var configDB = require('./middlewares/database.js');
+var configDB = require('./middlewares/database');
 
 // Configure app
 mongoose.connect(configDB.url); // connect to our database
@@ -42,6 +42,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
+
 // app.use(csrf());
 
 
@@ -54,6 +55,17 @@ app.use(flash());
 // Routes
 app.use('/', router);
 require('./controllers/routes.js')(app, passport);
+
+// 404 Middleware
+app.use(function(req, res, next) {
+  res.status(404).send('Sorry cant find that!');
+});
+
+// Error-handler middleware
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
 
 // Start the server
