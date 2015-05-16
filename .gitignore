@@ -28,3 +28,4 @@ node_modules
 
 # Other documents
 #/middlewares/database.js
+middlewares/database.js
