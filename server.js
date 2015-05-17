@@ -45,7 +45,6 @@ app.use(morgan('dev'));
 
 // app.use(csrf());
 
-
 // Passport info
 app.use(session({secret: 'fentonsfartssmellawful'}));
 app.use(passport.initialize());
@@ -54,7 +53,7 @@ app.use(flash());
 
 // Routes
 app.use('/', router);
-require('./controllers/routes.js')(app, passport);
+require('./controllers/routes')(app, passport);
 
 // 404 Middleware
 app.use(function(req, res, next) {
