@@ -33,7 +33,8 @@ module.exports = function(router, passport) {
   //========= Post
   router.get('/about', function(req,res) {
 
-    res.render('about_me.ejs', {title: 'RhoStats | A Blog About Everything Statistics and Programming'});
+    res.render('about_me.ejs', {title: 'RhoStats | A Blog About Everything Statistics and Programming',
+      categories: [{menu_name: 'Sports', link: 'sports'}, {menu_name: 'Politics', link: 'politics'}, {menu_name: 'Economy', link: 'economy'}, {menu_name: 'Business', link: 'business'}]});
 
   });
 
