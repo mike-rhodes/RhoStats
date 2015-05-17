@@ -32,3 +32,6 @@ node_modules
 #/middlewares/database.js
 >>>>>>> 7cd24cad5076fbefd18a91bef1d3ac2d2e5d95c9
 middlewares/database.js
+*.csr
+*.key
+*.pass.key
